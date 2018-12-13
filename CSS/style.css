@@ -1,0 +1,167 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+#map {
+  height: 100%;
+  width: 100%;
+}
+#title {
+  position: absolute;
+  bottom: 20px; left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  display: none;
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  transition: 0.3s;
+}
+#title:hover {
+  color: #17C0A5;
+}
+/* FADE IN
+______________________________________*/
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 1s;
+}
+
+/* OVERLAY STYLING
+______________________________________*/
+#overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;left: 0;right: 0;bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 3;
+  cursor: pointer;
+}
+
+/* LOGIN POPUP STYLING
+______________________________________*/
+#popup {
+  width: 60%;
+  background: white;
+  text-align: center;
+  padding:  50px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  cursor: auto;
+}
+#popup h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 5em;
+  margin: 0px;
+}
+#popup h2 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1em;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+#popup h3 {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
+  font-weight: 400;
+  font-size: 0.85em;
+  margin-bottom: 20px;
+}
+#popup h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.5em;
+  width: 20%;
+  margin-bottom: 0px;
+}
+#popup h4:hover {
+  color: #17C0A5;
+}
+#popup p {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  margin: 0;
+  font-size: 0.6em;
+}
+
+/* SNAZZY INFO WINDOW STYLING
+______________________________________*/
+.si-content {
+  text-align: center;
+}
+.si-content h1 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 0px;
+}
+.si-content h3 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 1em;
+  margin-top: 0px;
+}
+.si-content p {
+  font-family: 'Roboto', sans-serif;
+}
+.si-content .container {
+  position: relative;
+}
+.si-content .overlay {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0; bottom: 0; left: 0;right: 0;
+  height: 100%; width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #17C0A5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.si-content .container:hover .overlay {
+  opacity: 1;
+}
+.si-content img {
+  width: 100%;
+  height: auto;
+}
+.si-content h2 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 900;
+  font-size: 3.5em;
+  margin: 0px;
+}

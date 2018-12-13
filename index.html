@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A Quiet Place</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyD2ftllkbVwaP3yVc7MkeVL4gMOk5txHrU&libraries=places">
+  </script>
+  <!-- SNAZZY INFO WINDOW -->
+  <link rel="stylesheet" href="CSS/snazzy-info-window.min.css">
+  <script src="CSS/snazzy-info-window.min.js"></script>
+  <!-- AJAX -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:900|Roboto|Roboto+Mono" rel="stylesheet">
+  <!-- JAVASCRIPT -->
+  <script src="map.js"></script>
+</head>
+
+<body onload="initMap()">
+  <div id="overlay">
+    <div class="fade-in" id="popup">
+      <h1>A QUIET PLACE</h1>
+      <h2>An interactive map showcasing the best places to study at Tufts</h2>
+      <h3>Using Seeed Wio Nodes and Grove sensors, we collected over 50 hours of
+          loudness and crowdedness data from 15 of the most popular study spots
+          on the Tufts University campus. The result is the map you see here.
+          To read more about our methodology, data processing, findings, and the
+          project as a whole, take a look at our report <a href="">here</a>.
+      </h3>
+      <p>Created by Will Glockner, Matthew Langen, and Tommaso Lombardi</p>
+      <p>Copyright Fall 2018. Built for Tufts University ENP162: Human Machine System Design</p>
+      <h4 onclick="off()">EXPLORE</h4>
+    </div>
+  </div>
+  <div id="map"></div>
+  <a id="title" href="">A QUIET PLACE</a>
+</body>
+</html>
